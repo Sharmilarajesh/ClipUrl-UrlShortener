@@ -1,0 +1,134 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Poppins', -apple-system, sans-serif;
+  background: linear-gradient(to right, #1c1b2f, #261b3a, #2c1c3d);
+  color: #f5f3ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Form Container - Now properly centered */
+/* Form Container - Now properly centered */
+.form-container {
+  background: rgba(28, 27, 47, 0.9);
+  border-radius: clamp(14px, 2vw, 18px);
+  box-shadow: 0 0 clamp(15px, 3vw, 25px) rgba(170, 80, 255, 0.15), 
+              0 0 clamp(20px, 4vw, 40px) rgba(122, 0, 255, 0.08);
+  backdrop-filter: blur(clamp(10px, 2vw, 15px));
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 4vw, 35px);
+  width: min(90%, 520px);
+  text-align: center;
+  transition: 0.4s ease;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 80px auto 0; /* Added top margin to push it down */
+}
+
+/* Rest of your styles remain the same */
+.form-container h1 {
+  font-size: clamp(20px, 5vw, 26px);
+  color: #f0e6ff;
+  margin-bottom: clamp(20px, 3vw, 25px);
+  letter-spacing: clamp(0.5px, 0.2vw, 0.8px);
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  padding: clamp(12px, 2vw, 14px) clamp(14px, 2vw, 16px);
+  margin: clamp(10px, 2vw, 14px) 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: clamp(8px, 1.5vw, 10px);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: clamp(14px, 3vw, 15px);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+
+
+form input::placeholder {
+  color: #cfc5f0;
+  opacity: 0.8;
+  font-size: clamp(13px, 2.5vw, 14px);
+}
+
+form input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #a855f7;
+  box-shadow: 0 0 clamp(6px, 1.5vw, 8px) rgba(168, 85, 247, 0.5);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: clamp(12px, 2vw, 14px);
+  margin-top: clamp(16px, 3vw, 18px);
+  border: none;
+  border-radius: clamp(8px, 1.5vw, 10px);
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  cursor: pointer;
+  box-shadow: 0 clamp(3px, 1vw, 4px) clamp(10px, 3vw, 15px) rgba(142, 45, 226, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 clamp(4px, 1.5vw, 6px) clamp(15px, 4vw, 25px) rgba(142, 45, 226, 0.6);
+}
+
+
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+    align-items: flex-start;
+    min-height: calc(100vh - 30px);
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 24px 18px;
+  }
+
+  form input {
+    padding: 12px 14px;
+  }
+
+  button {
+    padding: 13px;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion) {
+  .form-container,
+  button,
+  form input {
+    transition: none;
+  }
+  
+  button:hover {
+    transform: none;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+}
